@@ -31,7 +31,12 @@ const uppercaseWordsInArray = strings => {
 };
 
 const reverseWordsInArray = strings => {
-  return strings.map(string => string.split("").reverse().join(""));
+  return strings.map(string =>
+    string
+      .split('')
+      .reverse()
+      .join('')
+  );
 };
 
 const onlyEven = numbers => {
@@ -43,9 +48,15 @@ const removeNthElement2 = (index, array) => {
 };
 
 const elementsStartingWithAVowel = strings => {
-  return strings.filter((item) => {
+  return strings.filter(item => {
     const firstLetter = item[0].toLowerCase();
-    return firstLetter === 'a' || firstLetter === 'e' || firstLetter === 'i' || firstLetter === 'o' || firstLetter === 'u';
+    return (
+      firstLetter === 'a' ||
+      firstLetter === 'e' ||
+      firstLetter === 'i' ||
+      firstLetter === 'o' ||
+      firstLetter === 'u'
+    );
   });
 };
 
@@ -59,8 +70,15 @@ const sumNumbers = numbers => {
 };
 
 const sortByLastLetter = strings => {
-  const reverseString = (item) => item.split('').reverse().join('');
-  return strings.map(reverseString).sort().map(reverseString);
+  const reverseString = item =>
+    item
+      .split('')
+      .reverse()
+      .join('');
+  return strings
+    .map(reverseString)
+    .sort()
+    .map(reverseString);
 };
 
 module.exports = {
